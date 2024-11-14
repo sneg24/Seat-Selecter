@@ -1,0 +1,82 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+h1, h2 {
+    margin-bottom: 0.5rem;
+}
+
+/* Seat Map Styling */
+.seat-map-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.seat-map {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 8px;
+    max-width: 400px;
+}
+
+/* Seat Styling */
+.seat {
+    width: 30px;
+    height: 30px;
+    background-color: #90caf9;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.seat.selected {
+    background-color: #4caf50;
+}
+
+.seat.occupied {
+    background-color: #e57373;
+    cursor: not-allowed;
+}
+
+/* Selection Info and Book Button */
+.selection-info {
+    text-align: center;
+    padding: 1rem;
+}
+
+#book-button {
+    margin-top: 1rem;
+    padding: 0.5rem 2rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#book-button:hover {
+    background-color: #555;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .seat-map {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
